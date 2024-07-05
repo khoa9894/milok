@@ -1,0 +1,34 @@
+ #include "animation.h"
+#include <iostream>
+using namespace std;
+animation::animation(sf::Texture& tex, int numFrame)
+{
+	k_numFrame = numFrame;
+	setTexture(tex);
+	k_currentFrame = sf::Vector2i(0, 0);
+	calSize();
+	source = sf:: IntRect(k_currentFrame.x,k_currentFrame.y, k_frameNum.x, k_frameNum.y);
+	setTextureRect(source);
+}
+
+void animation::calSize()
+{
+	k_frameNum.x = getTexture()->getSize().x / k_numFrame;
+	k_frameNum.y = getTexture()->getSize().y;
+}
+
+
+void animation::update(sf::Clock &cc)
+{
+	
+	if (cc.getElapsedTime().asSeconds() > 0.1) {
+		if (source.left == getTexture()->getSize().x - k_frameNum.x) {
+		 source.left = 0;
+		}
+		else {
+			source.left += k_frameNum.x;
+			setTextureRect(source);
+			cc.restart();
+		}
+	}
+}
