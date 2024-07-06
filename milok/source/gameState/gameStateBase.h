@@ -1,7 +1,16 @@
 #pragma once
-#include "stateStack.h"
-#include "GSIntro.h"
 #include <SFML/Graphics.hpp>
+enum StateTypes
+{
+	INVALID = 0,
+	INTRO,
+	MENU,
+	PLAY,
+	SETTING,
+	ABOUT,
+	HIGHSCORE,
+	END,
+};
 class gameStateBase {
 public:
 	gameStateBase() {};

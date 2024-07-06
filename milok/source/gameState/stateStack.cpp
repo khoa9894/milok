@@ -1,5 +1,5 @@
 #include "stateStack.h"
-
+#include "gameStateBase.h"
 stateStack::stateStack()
 {
 	k_currentState = nullptr;

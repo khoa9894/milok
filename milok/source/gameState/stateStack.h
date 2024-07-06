@@ -2,18 +2,6 @@
 #include "../gameManage/singleton.h"
 #include <list>
 #include "gameStateBase.h"
-//class GameStateBase;
-enum StateTypes
-{
-	INVALID = 0,
-	INTRO,
-	MENU,
-	PLAY,
-	SETTING,
-	ABOUT,
-	HIGHSCORE,
-	END,
-};
 class stateStack : public CSingleton<stateStack>  {
 private:
     gameStateBase *k_currentState;
