@@ -142,7 +142,11 @@
     <ClInclude Include="source\gameManage\singleton.h" />
     <ClInclude Include="source\gameObject\animation.h" />
     <ClInclude Include="source\gameState\gameStateBase.h" />
+    <ClInclude Include="source\gameState\GSAbout.h" />
     <ClInclude Include="source\gameState\GSIntro.h" />
+    <ClInclude Include="source\gameState\GSMenu.h" />
+    <ClInclude Include="source\gameState\GSPlay.h" />
+    <ClInclude Include="source\gameState\GSSetting.h" />
     <ClInclude Include="source\gameState\stateStack.h" />
   </ItemGroup>
   <ItemGroup>
@@ -151,7 +155,11 @@
     <ClCompile Include="source\gameManage\resourceManage.cpp" />
     <ClCompile Include="source\gameObject\animation.cpp" />
     <ClCompile Include="source\gameState\gameStateBase.cpp" />
+    <ClCompile Include="source\gameState\GSAbout.cpp" />
     <ClCompile Include="source\gameState\GSIntro.cpp" />
+    <ClCompile Include="source\gameState\GSMenu.cpp" />
+    <ClCompile Include="source\gameState\GSPlay.cpp" />
+    <ClCompile Include="source\gameState\GSSetting.cpp" />
     <ClCompile Include="source\gameState\stateStack.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -16,5 +16,8 @@ public:
 	void PushState(StateTypes st);
 	void PopState();
 	void PerformStateChange();
-	
+	bool hasState();
+	bool needToChangeState();
+	gameStateBase* currentState() const;
+	gameStateBase* nextState() const;
 };

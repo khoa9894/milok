@@ -57,6 +57,18 @@
     <ClInclude Include="source\gameState\GSIntro.h">
       <Filter>Source Files\gameState</Filter>
     </ClInclude>
+    <ClInclude Include="source\gameState\GSMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gameState\GSPlay.h">
+      <Filter>Source Files\gameState</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gameState\GSSetting.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gameState\GSAbout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\application.cpp">
@@ -71,13 +83,25 @@
     <ClCompile Include="source\gameState\gameStateBase.cpp">
       <Filter>Source Files\gameState</Filter>
     </ClCompile>
-    <ClCompile Include="source\gameState\stateStack.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="milok.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="source\gameState\GSIntro.cpp">
+      <Filter>Source Files\gameState</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gameState\stateStack.cpp">
+      <Filter>Source Files\gameState</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gameState\GSMenu.cpp">
+      <Filter>Source Files\gameState</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gameState\GSPlay.cpp">
+      <Filter>Source Files\gameState</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gameState\GSSetting.cpp">
+      <Filter>Source Files\gameState</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gameState\GSAbout.cpp">
       <Filter>Source Files\gameState</Filter>
     </ClCompile>
   </ItemGroup>

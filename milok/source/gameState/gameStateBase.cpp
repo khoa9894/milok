@@ -1,5 +1,11 @@
 #include "gameStateBase.h"
 #include "GSIntro.h"
+#include"GSMenu.h"
+#include"GSPlay.h"
+#include"GSSetting.h"
+#include "GSAbout.h"
+#include "GSHighScore.h"
+#include "GSEnd.h"
 gameStateBase* gameStateBase::CreateState(StateTypes st)
 {
 	gameStateBase* gs = nullptr;
@@ -10,7 +16,7 @@ gameStateBase* gameStateBase::CreateState(StateTypes st)
 	case INTRO:
 		gs = new GSIntro();
 		break;
-	/*case MENU:
+	case MENU:
 		gs = new GSMenu();
 		break;
 	case PLAY:
@@ -27,7 +33,7 @@ gameStateBase* gameStateBase::CreateState(StateTypes st)
 		break;
 	case END:
 		gs = new GSEnd();
-		break;*/
+		break;
 	default:
 		break;
 	}

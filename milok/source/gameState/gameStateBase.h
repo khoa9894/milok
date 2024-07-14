@@ -19,7 +19,7 @@ public:
   virtual void Resume() = 0;
   virtual void Pause() = 0;
   virtual void Init() = 0;
-  virtual void Update() = 0;
+  virtual void Update(sf::Clock &cc) = 0;
   virtual void Render(sf::RenderWindow* window) = 0;
   static gameStateBase* CreateState(StateTypes st);
 };

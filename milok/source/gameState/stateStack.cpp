@@ -61,3 +61,17 @@ void stateStack::PerformStateChange()
 		k_nexState = nullptr;
 	}
 }
+bool stateStack::needToChangeState() {
+	return k_nexState != nullptr;
+}
+gameStateBase* stateStack::currentState() const
+{
+	return k_currentState;
+}
+gameStateBase* stateStack::nextState() const
+{
+	return k_nexState;
+}
+bool stateStack::hasState() {
+	return k_stack.size() > 0;
+}
