@@ -138,11 +138,15 @@
     <ClInclude Include="resourceManager.h" />
     <ClInclude Include="resourceManger.h" />
     <ClInclude Include="source\application.h" />
+    <ClInclude Include="source\conector\windowConector.h" />
     <ClInclude Include="source\gameManage\resourceManage.h" />
     <ClInclude Include="source\gameManage\singleton.h" />
     <ClInclude Include="source\gameObject\animation.h" />
+    <ClInclude Include="source\gameObject\gameButton.h" />
     <ClInclude Include="source\gameState\gameStateBase.h" />
     <ClInclude Include="source\gameState\GSAbout.h" />
+    <ClInclude Include="source\gameState\GSEnd.h" />
+    <ClInclude Include="source\gameState\GSHighScore.h" />
     <ClInclude Include="source\gameState\GSIntro.h" />
     <ClInclude Include="source\gameState\GSMenu.h" />
     <ClInclude Include="source\gameState\GSPlay.h" />
@@ -152,10 +156,14 @@
   <ItemGroup>
     <ClCompile Include="milok.cpp" />
     <ClCompile Include="source\application.cpp" />
+    <ClCompile Include="source\conector\windowConector.cpp" />
     <ClCompile Include="source\gameManage\resourceManage.cpp" />
     <ClCompile Include="source\gameObject\animation.cpp" />
+    <ClCompile Include="source\gameObject\gameButton.cpp" />
     <ClCompile Include="source\gameState\gameStateBase.cpp" />
     <ClCompile Include="source\gameState\GSAbout.cpp" />
+    <ClCompile Include="source\gameState\GSEnd.cpp" />
+    <ClCompile Include="source\gameState\GSHighScore.cpp" />
     <ClCompile Include="source\gameState\GSIntro.cpp" />
     <ClCompile Include="source\gameState\GSMenu.cpp" />
     <ClCompile Include="source\gameState\GSPlay.cpp" />

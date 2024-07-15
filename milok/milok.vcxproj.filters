@@ -69,6 +69,18 @@
     <ClInclude Include="source\gameState\GSAbout.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="source\gameState\GSHighScore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gameState\GSEnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\conector\windowConector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gameObject\gameButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\application.cpp">
@@ -103,6 +115,18 @@
     </ClCompile>
     <ClCompile Include="source\gameState\GSAbout.cpp">
       <Filter>Source Files\gameState</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gameState\GSEnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gameState\GSHighScore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\conector\windowConector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gameObject\gameButton.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
