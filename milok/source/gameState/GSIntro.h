@@ -14,7 +14,8 @@ public:
 	 void Update(sf::Clock& cc);
 	 void Render(sf::RenderWindow* window);
 private:
-	sf::RectangleShape rec;
-
-
+	sf::Sprite sprite;
+	sf::Texture tex;
+	sf::Text text;
+	sf::Font fon;
 };

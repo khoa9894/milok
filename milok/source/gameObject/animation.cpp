@@ -18,7 +18,7 @@ void animation::calSize()
 }
 
 
-void animation::update(sf::Clock &cc)
+void animation::Update(sf::Clock &cc)
 {
 	
 	if (cc.getElapsedTime().asSeconds() > 0.1) {

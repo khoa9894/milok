@@ -12,5 +12,7 @@ public:	GSMenu();
 	void Update(sf::Clock& cc);
 	void Render(sf::RenderWindow* window);
 private:
-	sf::CircleShape shape;
+	std::list<gameButton*> buttonList;
+	sf::Texture text;
+	sf::Sprite pi;
 };

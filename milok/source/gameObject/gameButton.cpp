@@ -37,3 +37,8 @@ bool gameButton::isTouch()
 {
     return false;
 }
+
+void gameButton::setClick(void(*func)())
+{
+    gameButtonClick = func;
+}

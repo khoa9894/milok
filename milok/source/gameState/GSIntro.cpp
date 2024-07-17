@@ -14,18 +14,31 @@ void GSIntro::Pause()
 
 void GSIntro::Init()
 {
-	rec.setSize(sf::Vector2f (200, 200));
-	rec.setFillColor(sf::Color::Red);
+	fon.loadFromFile("../Data/Font/ARCADE_N.TTF");
+	text.setFont(fon);
+	text.setString("Du ma studio");
+	text.setFillColor(sf::Color::Black);
+	text.setPosition(300, 350);
+	tex.loadFromFile("../Data/Textures/cuc.png");
+	
+	sprite.setTexture(tex);
+	sprite.setPosition(971/2,497/2);
+	
+	sprite.setOrigin((sf::Vector2f)tex.getSize() / 2.f);
+	sprite.setScale(0.3, 0.3);
 }
 
 void GSIntro::Update(sf::Clock& cc)
 {
-	if (cc.getElapsedTime().asSeconds() > 1) {
+	if (cc.getElapsedTime().asSeconds() > 3) {
 		stateStack::GetInstance()->ChangeState(StateTypes::MENU);
 	}
 }
 
 void GSIntro::Render(sf::RenderWindow* window)
 {
-	window->draw(rec);
+	window->clear(sf::Color::White);
+	window->draw(sprite);
+	window->draw(text);
+
 }

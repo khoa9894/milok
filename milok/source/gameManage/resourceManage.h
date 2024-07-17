@@ -1,9 +1,8 @@
 #pragma once
-#include "singleton.h"
 #include <iostream>
 #include <map>
 #include <string>
-#include <SFML/Graphics.hpp>
+#include "../conector/windowConector.h"
 using namespace std;
 class resourceManage :public CSingleton<resourceManage> {
 public: resourceManage();

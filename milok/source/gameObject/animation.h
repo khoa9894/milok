@@ -10,7 +10,7 @@ private:
 public:
 	animation(sf::Texture &tex, int numFrame);
 	void calSize();
-	void update(sf::Clock &cc);
+	void Update(sf::Clock &cc);
 
 };
 

@@ -1,5 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include "../conector/windowConector.h"
+#include "../gameObject/gameButton.h"
 enum StateTypes
 {
 	INVALID = 0,

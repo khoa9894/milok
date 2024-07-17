@@ -3,9 +3,11 @@
 
 void application::Init()
 {
-    k_window = new sf::RenderWindow (sf::VideoMode(600, 600), "SFML works!");
-    conc.setTexture(*resourceManage::GetInstance()->gtTexture("Run"));
+    k_window = new sf::RenderWindow(sf::VideoMode(971, 500), "SFML works!");
     stateStack::GetInstance()->ChangeState(StateTypes::INTRO);
+    windowConector::GetInstance()->setWindow(k_window);
+  //  rt.loadFromFile("../Data/Textures/idle.png");
+   // hi = new animation(rt, 6);
 }
 
 void application::Run()
@@ -20,23 +22,26 @@ void application::Run()
             if (event.type == sf::Event::Closed)
                 k_window->close();
         }
-        update(cc);
+        Update(cc);
         Render();
     }
 }
-void application::update(sf::Clock &cc) {
+void application::Update(sf::Clock &cc) {
     if (stateStack::GetInstance()->needToChangeState()) {
         stateStack::GetInstance()->PerformStateChange();
     }
     stateStack::GetInstance()->currentState()->Update(cc);
+   // hi->Update(cc);
 }
 void application::Render()
 {
     
-    k_window->clear(sf::Color::White);
-    k_window->draw(conc);
-    stateStack::GetInstance()->currentState()->Render(k_window);
+    k_window->clear(sf::Color::Black);
+   
+   stateStack::GetInstance()->currentState()->Render(k_window);
+  // k_window->draw(*hi);
     k_window->display();
+    
 }
 application:: ~ application() {
     if (k_window != nullptr) delete k_window;
