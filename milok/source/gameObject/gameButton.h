@@ -1,10 +1,11 @@
-#pragma once
+ #pragma once
 #include<SFML/Graphics.hpp>
 #include"../conector/windowConector.h"
+#include"../gameManage/resourceManage.h"
 class gameButton :public sf::RectangleShape {
 public:	gameButton();
 	~gameButton();
-	void Init();
+	void Init(std::string name);
 	void Update(sf::Clock& cc);
 	void Render(sf::RenderWindow* window);
 	void touch();
@@ -13,4 +14,5 @@ public:	gameButton();
 private:
 	void (*gameButtonClick)();
 	bool isClick;
+	
 };

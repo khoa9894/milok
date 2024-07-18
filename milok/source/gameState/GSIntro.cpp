@@ -14,23 +14,20 @@ void GSIntro::Pause()
 
 void GSIntro::Init()
 {
-	fon.loadFromFile("../Data/Font/ARCADE_N.TTF");
-	text.setFont(fon);
+	
+	text.setFont(*resourceManage::GetInstance()->getFont("ARCADE_N"));
 	text.setString("Du ma studio");
 	text.setFillColor(sf::Color::Black);
 	text.setPosition(300, 350);
-	tex.loadFromFile("../Data/Textures/cuc.png");
-	
-	sprite.setTexture(tex);
+	sprite.setTexture(*resourceManage::GetInstance()->gtTexture("cuc"));
 	sprite.setPosition(971/2,497/2);
-	
-	sprite.setOrigin((sf::Vector2f)tex.getSize() / 2.f);
+	sprite.setOrigin((sf::Vector2f) resourceManage::GetInstance()->gtTexture("cuc")->getSize() / 2.f);
 	sprite.setScale(0.3, 0.3);
 }
 
 void GSIntro::Update(sf::Clock& cc)
 {
-	if (cc.getElapsedTime().asSeconds() > 3) {
+	if (cc.getElapsedTime().asSeconds() > 0.1) {
 		stateStack::GetInstance()->ChangeState(StateTypes::MENU);
 	}
 }

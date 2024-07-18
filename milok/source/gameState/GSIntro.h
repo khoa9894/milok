@@ -15,7 +15,6 @@ public:
 	 void Render(sf::RenderWindow* window);
 private:
 	sf::Sprite sprite;
-	sf::Texture tex;
 	sf::Text text;
-	sf::Font fon;
+
 };

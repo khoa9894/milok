@@ -13,6 +13,5 @@ public:	GSMenu();
 	void Render(sf::RenderWindow* window);
 private:
 	std::list<gameButton*> buttonList;
-	sf::Texture text;
 	sf::Sprite pi;
 };

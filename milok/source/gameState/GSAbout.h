@@ -3,7 +3,8 @@
 #include "gameStateBase.h"
 #include <SFML/Graphics.hpp>
 #include"stateStack.h"
-
+#include <SFML/Network.hpp>
+#include <SFML/Network/IpAddress.hpp>
 class GSAbout : public gameStateBase {
 public:
 	GSAbout() ;
@@ -14,8 +15,11 @@ public:
 	void Init();
 	void Update(sf::Clock& cc);
 	void Render(sf::RenderWindow* window);
-private:
-
+	void openGitHubLink(const std::string& url);
+ private: 
+	   sf::Sprite pi;
+	   gameButton *butt;
+	   gameButton* ex;
 
 
 };

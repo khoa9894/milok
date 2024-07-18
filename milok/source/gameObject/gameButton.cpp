@@ -9,10 +9,12 @@ gameButton::~gameButton()
 {
 }
 
-void gameButton::Init()
+void gameButton::Init(std::string name)
 {
-    this->setSize(sf::Vector2f(200, 200));
-    this->setFillColor(sf::Color::Magenta);
+    this->setSize(sf::Vector2f(214/2, 215/2));
+   this->setTexture(resourceManage::GetInstance()->gtTexture(name));
+    
+  
 }
 void gameButton::Render(sf::RenderWindow* window) {
     window->draw(*this);
