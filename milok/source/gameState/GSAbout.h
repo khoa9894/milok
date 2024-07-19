@@ -15,7 +15,7 @@ public:
 	void Init();
 	void Update(sf::Clock& cc);
 	void Render(sf::RenderWindow* window);
-	void openGitHubLink(const std::string& url);
+//	void openGitHubLink(const std::string& url);
  private: 
 	   sf::Sprite pi;
 	   gameButton *butt;

@@ -81,6 +81,12 @@
     <ClInclude Include="source\gameObject\gameButton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="source\gameManage\layer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gameManage\background.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\application.cpp">
@@ -126,6 +132,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="source\gameObject\gameButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gameManage\layer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gameManage\background.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

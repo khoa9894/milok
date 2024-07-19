@@ -3,6 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include"stateStack.h"
 #include"GSMenu.h"
+#include "../gameManage/background.h"
 class GSPlay : public gameStateBase {
 public:
 	GSPlay() {};
@@ -14,6 +15,7 @@ public:
 	void Update(sf::Clock& cc);
 	void Render(sf::RenderWindow* window);
 private:
+	background concu;
 
 
 

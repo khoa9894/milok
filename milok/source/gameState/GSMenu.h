@@ -2,6 +2,7 @@
 #include "gameStateBase.h"
 #include <SFML/Graphics.hpp>
 #include"stateStack.h"
+#include"../gameObject/animation.h"
 class GSMenu :public gameStateBase {
 public:	GSMenu();
 	~GSMenu();
@@ -14,4 +15,5 @@ public:	GSMenu();
 private:
 	std::list<gameButton*> buttonList;
 	sf::Sprite pi;
+	animation* ani;
 };

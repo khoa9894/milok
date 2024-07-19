@@ -139,6 +139,8 @@
     <ClInclude Include="resourceManger.h" />
     <ClInclude Include="source\application.h" />
     <ClInclude Include="source\conector\windowConector.h" />
+    <ClInclude Include="source\gameManage\background.h" />
+    <ClInclude Include="source\gameManage\layer.h" />
     <ClInclude Include="source\gameManage\resourceManage.h" />
     <ClInclude Include="source\gameManage\singleton.h" />
     <ClInclude Include="source\gameObject\animation.h" />
@@ -157,6 +159,8 @@
     <ClCompile Include="milok.cpp" />
     <ClCompile Include="source\application.cpp" />
     <ClCompile Include="source\conector\windowConector.cpp" />
+    <ClCompile Include="source\gameManage\background.cpp" />
+    <ClCompile Include="source\gameManage\layer.cpp" />
     <ClCompile Include="source\gameManage\resourceManage.cpp" />
     <ClCompile Include="source\gameObject\animation.cpp" />
     <ClCompile Include="source\gameObject\gameButton.cpp" />

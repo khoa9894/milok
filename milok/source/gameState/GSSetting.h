@@ -14,7 +14,8 @@ public:
 	void Update(sf::Clock& cc);
 	void Render(sf::RenderWindow* window);
 private:
-
+	sf::Sprite pi;
+	gameButton* butt;
 
 
 };

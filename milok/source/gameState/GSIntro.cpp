@@ -17,17 +17,17 @@ void GSIntro::Init()
 	
 	text.setFont(*resourceManage::GetInstance()->getFont("ARCADE_N"));
 	text.setString("Du ma studio");
-	text.setFillColor(sf::Color::Black);
-	text.setPosition(300, 350);
-	sprite.setTexture(*resourceManage::GetInstance()->gtTexture("cuc"));
-	sprite.setPosition(971/2,497/2);
+	text.setFillColor(sf::Color::Red);
+	text.setPosition(512-150, 350);
+	sprite.setTexture(*resourceManage::GetInstance()->gtTexture("stool"));
+	sprite.setPosition(512-50,256-100);
 	sprite.setOrigin((sf::Vector2f) resourceManage::GetInstance()->gtTexture("cuc")->getSize() / 2.f);
-	sprite.setScale(0.3, 0.3);
+	sprite.setScale(0.4, 0.4);
 }
 
 void GSIntro::Update(sf::Clock& cc)
 {
-	if (cc.getElapsedTime().asSeconds() > 0.1) {
+	if (cc.getElapsedTime().asSeconds() > 1) {
 		stateStack::GetInstance()->ChangeState(StateTypes::MENU);
 	}
 }

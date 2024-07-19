@@ -3,7 +3,7 @@
 
 void application::Init()
 {
-    k_window = new sf::RenderWindow(sf::VideoMode(971, 500), "SFML works!");
+    k_window = new sf::RenderWindow(sf::VideoMode(512*2, 256*2), "SFML works!");
     stateStack::GetInstance()->ChangeState(StateTypes::INTRO);
     windowConector::GetInstance()->setWindow(k_window);
   //  rt.loadFromFile("../Data/Textures/idle.png");
