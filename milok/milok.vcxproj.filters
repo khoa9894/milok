@@ -30,38 +30,14 @@
     <ClInclude Include="application.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="source\application.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="source\gameObject\animation.h">
-      <Filter>Source Files\gameObject</Filter>
-    </ClInclude>
     <ClInclude Include="resourceManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="resourceManger.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="source\gameManage\resourceManage.h">
-      <Filter>Source Files\gameManage</Filter>
-    </ClInclude>
-    <ClInclude Include="source\gameManage\singleton.h">
-      <Filter>Source Files\gameManage</Filter>
-    </ClInclude>
-    <ClInclude Include="source\gameState\gameStateBase.h">
-      <Filter>Source Files\gameState</Filter>
-    </ClInclude>
-    <ClInclude Include="source\gameState\stateStack.h">
-      <Filter>Source Files\gameState</Filter>
-    </ClInclude>
-    <ClInclude Include="source\gameState\GSIntro.h">
-      <Filter>Source Files\gameState</Filter>
-    </ClInclude>
     <ClInclude Include="source\gameState\GSMenu.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="source\gameState\GSPlay.h">
-      <Filter>Source Files\gameState</Filter>
     </ClInclude>
     <ClInclude Include="source\gameState\GSSetting.h">
       <Filter>Header Files</Filter>
@@ -85,6 +61,33 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="source\gameManage\background.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gameState\gameStateBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gameManage\resourceManage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gameManage\singleton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gameState\GSPlay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gameObject\animation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gameState\GSIntro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gameState\stateStack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\application.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gameObject\Iplayer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -138,6 +141,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="source\gameManage\background.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gameObject\characterStateBase.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gameObject\playerState.h">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

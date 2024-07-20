@@ -7,7 +7,7 @@ public:	gameButton();
 	~gameButton();
 	void Init(std::string name);
 	void Update(sf::Clock& cc);
-	void Render(sf::RenderWindow* window);
+	void Render(sf::RenderWindow* window);    
 	void touch();
 	bool isTouch();
 	void setClick(void(*func)());
