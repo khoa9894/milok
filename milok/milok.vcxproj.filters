@@ -90,6 +90,9 @@
     <ClInclude Include="source\gameObject\Iplayer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="source\gameObject\Irun.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\application.cpp">
@@ -147,6 +150,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="source\gameObject\playerState.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gameObject\playerState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gameObject\Irun.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

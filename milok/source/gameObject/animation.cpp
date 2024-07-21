@@ -17,7 +17,10 @@ void animation::calSize()
 	k_frameNum.y = getTexture()->getSize().y;
 }
 
-
+void animation::Reset() {
+	//cc.restart();
+	source.left = 0;
+}
 void animation::Update(sf::Clock &cc)
 {
 	

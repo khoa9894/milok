@@ -3,11 +3,11 @@
 void background::Init()
 {
 	layer* layer1;
-	layer1= new layer();
+	layer1 = new layer();
 	layer1->Init("1", 2);
 	layerList.push_back(layer1);
 	layer1 = new layer();
-	layer1->Init("2",1 );
+	layer1->Init("2", 1);
 	layerList.push_back(layer1);
 	layer1 = new layer();
 	layer1->Init("3", 1);
@@ -48,18 +48,14 @@ void background::Init()
 	layer1 = new layer();
 	layer1->Init("15", 1);
 	layerList.push_back(layer1);
-	layer1 = new layer();
-	layer1->Init("16", 1);
-	layerList.push_back(layer1);
+	
+//	layerList.push_back(layer1);
 }
 
 void background::Update(float speed)
 {
 	for (auto it : layerList) {
 		if (it != layerList.front()) {
-			if (it == layerList.back()) {
-				it->Update(0.07);
-			}
 			it->Update(0.05);
 
 		}

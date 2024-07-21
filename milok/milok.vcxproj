@@ -146,6 +146,7 @@
     <ClInclude Include="source\gameObject\animation.h" />
     <ClInclude Include="source\gameObject\gameButton.h" />
     <ClInclude Include="source\gameObject\Iplayer.h" />
+    <ClInclude Include="source\gameObject\Irun.h" />
     <ClInclude Include="source\gameState\gameStateBase.h" />
     <ClInclude Include="source\gameState\GSAbout.h" />
     <ClInclude Include="source\gameState\GSEnd.h" />
@@ -166,6 +167,8 @@
     <ClCompile Include="source\gameObject\animation.cpp" />
     <ClCompile Include="source\gameObject\characterStateBase.h" />
     <ClCompile Include="source\gameObject\gameButton.cpp" />
+    <ClCompile Include="source\gameObject\Irun.cpp" />
+    <ClCompile Include="source\gameObject\playerState.cpp" />
     <ClCompile Include="source\gameObject\playerState.h" />
     <ClCompile Include="source\gameState\gameStateBase.cpp" />
     <ClCompile Include="source\gameState\GSAbout.cpp" />

@@ -11,6 +11,6 @@ public:
 	animation(sf::Texture &tex, int numFrame);
 	void calSize();
 	void Update(sf::Clock &cc);
-
+	void Reset();
 };
 
