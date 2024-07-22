@@ -22,8 +22,12 @@ void GSPlay::Init()
 
 void GSPlay::Update(sf::Clock& cc)
 {
-	layer1->Update(0.05);
-	concu.Update(0.05);
+	
+	if (ccc.getState() != characterStateBase::characterState::ATTACK)
+	{
+		layer1->Update(0.1);
+		concu.Update(0.05);
+	}
 	ccc.Update(&cc);
 }
 

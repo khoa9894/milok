@@ -144,7 +144,12 @@
     <ClInclude Include="source\gameManage\resourceManage.h" />
     <ClInclude Include="source\gameManage\singleton.h" />
     <ClInclude Include="source\gameObject\animation.h" />
+    <ClInclude Include="source\gameObject\attack.h" />
     <ClInclude Include="source\gameObject\gameButton.h" />
+    <ClInclude Include="source\gameObject\Hitbox.h" />
+    <ClInclude Include="source\gameObject\Ideath.h" />
+    <ClInclude Include="source\gameObject\Ifall.h" />
+    <ClInclude Include="source\gameObject\Ijump.h" />
     <ClInclude Include="source\gameObject\Iplayer.h" />
     <ClInclude Include="source\gameObject\Irun.h" />
     <ClInclude Include="source\gameState\gameStateBase.h" />
@@ -165,8 +170,12 @@
     <ClCompile Include="source\gameManage\layer.cpp" />
     <ClCompile Include="source\gameManage\resourceManage.cpp" />
     <ClCompile Include="source\gameObject\animation.cpp" />
+    <ClCompile Include="source\gameObject\attack.cpp" />
     <ClCompile Include="source\gameObject\characterStateBase.h" />
     <ClCompile Include="source\gameObject\gameButton.cpp" />
+    <ClCompile Include="source\gameObject\Ideath.cpp" />
+    <ClCompile Include="source\gameObject\Ifall.cpp" />
+    <ClCompile Include="source\gameObject\Ijump.cpp" />
     <ClCompile Include="source\gameObject\Irun.cpp" />
     <ClCompile Include="source\gameObject\playerState.cpp" />
     <ClCompile Include="source\gameObject\playerState.h" />

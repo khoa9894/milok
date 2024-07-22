@@ -21,8 +21,15 @@ void Irun::Render(sf::RenderWindow* window)
 
 void Irun::Update(sf::Clock* cc)
 {
-	cu->Update(*cc);
+	
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+		player->changeState(characterStateBase::characterState::JUMP);
 
+	}
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
+		player->changeState(characterStateBase::characterState::ATTACK);
+	}
+	cu->Update(*cc);
 }
 
 void Irun::Reset()

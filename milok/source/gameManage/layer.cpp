@@ -11,7 +11,7 @@ void layer::Init(std::string name,int n)
 		pi.setOrigin(sf::Vector2f(tex->getSize().x * 0.5f, tex->getSize().y * 0.5f));
 		pi.setPosition(512, 256);
 		pi1.setOrigin(sf::Vector2f(tex->getSize().x * 0.5f, tex->getSize().y * 0.5f));
-		pi1.setPosition(512 + 512*2, 256);
+		pi1.setPosition(512 + 510*2, 256);
 	}
 	if (n == 2) {
 		sf::Texture* tex = resourceManage::GetInstance()->gtTexture(name);
@@ -24,11 +24,11 @@ void layer::Init(std::string name,int n)
 
 void layer::Update(float speed)
 {
-	if (pi.getPosition().x<=-509) {
-		pi.setPosition(512+ 512*2, 256);
+	if (pi.getPosition().x<=-512) {
+		pi.setPosition(512+ 510*2, 256);
 }
-	if (pi1.getPosition().x <= -509) {
-		pi1.setPosition(512 + 512 * 2, 256);
+	if (pi1.getPosition().x <= -512) {
+		pi1.setPosition(512 + 510 * 2, 256);
 	}
 	pi.move(-speed, 0);
 	pi1.move(-speed, 0);

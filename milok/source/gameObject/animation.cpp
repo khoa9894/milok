@@ -9,6 +9,10 @@ animation::animation(sf::Texture& tex, int numFrame)
 	calSize();
 	source = sf:: IntRect(k_currentFrame.x,k_currentFrame.y, k_frameNum.x, k_frameNum.y);
 	setTextureRect(source);
+	if (k_numFrame == 3) {
+		k_time = 1.0;
+	}
+	else k_time = 0.1;
 }
 
 void animation::calSize()
@@ -23,8 +27,7 @@ void animation::Reset() {
 }
 void animation::Update(sf::Clock &cc)
 {
-	
-	if (cc.getElapsedTime().asSeconds() > 0.1) {
+	if (cc.getElapsedTime().asSeconds() > k_time) {
 		if (source.left == getTexture()->getSize().x - k_frameNum.x) {
 		 source.left = 0;
 		}
