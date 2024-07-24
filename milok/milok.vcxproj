@@ -173,6 +173,7 @@
     <ClCompile Include="source\gameObject\attack.cpp" />
     <ClCompile Include="source\gameObject\characterStateBase.h" />
     <ClCompile Include="source\gameObject\gameButton.cpp" />
+    <ClCompile Include="source\gameObject\Hitbox.cpp" />
     <ClCompile Include="source\gameObject\Ideath.cpp" />
     <ClCompile Include="source\gameObject\Ifall.cpp" />
     <ClCompile Include="source\gameObject\Ijump.cpp" />

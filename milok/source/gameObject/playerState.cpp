@@ -4,7 +4,6 @@
 #include "Ifall.h"
 #include "Ideath.h"
 #include "attack.h"
-
 playerState::playerState() {
 	nextState = characterStateBase::characterState::SNULL;
 	current = characterStateBase::characterState::SNULL;
@@ -24,8 +23,10 @@ playerState::~playerState() {
 	if (fallState != nullptr) delete fallState;
 	if (attackState != nullptr) delete attackState;
 	if (death != nullptr) delete death;
-	//if (currentState != nullptr) delete currentState;
 	currentState = nullptr;
+}
+skeleton* playerState:: getSkeleton() {
+	return ske;
 }
 void playerState::changeState(characterStateBase::characterState nextState)
 {
@@ -37,6 +38,8 @@ void playerState::Init() {
 	fallState->Init();
 	attackState->Init();
 	death->Init();
+	ske = new skeleton(sf::Vector2i( 64, 44));
+	ske->Init(sf::Vector2f(3, 200));
 }
 void playerState::Update(sf::Clock* cc)
 {
@@ -48,6 +51,7 @@ void playerState::Update(sf::Clock* cc)
 void playerState::Render(sf::RenderWindow* window)
 {
 	currentState->Render(window);
+	window->draw(*ske);
 }
 
 void playerState::performStateChange()

@@ -1,5 +1,10 @@
 #include "GSPlay.h"
 
+GSPlay::~GSPlay()
+{
+	//if (ccc != nullptr) delete ccc;
+}
+
 void GSPlay::Exit()
 {
 }

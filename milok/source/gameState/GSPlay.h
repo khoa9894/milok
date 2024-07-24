@@ -8,7 +8,7 @@
 class GSPlay : public gameStateBase {
 public:
 	GSPlay() {};
-	~GSPlay() {};
+	~GSPlay();
 	void Exit();
 	void Resume();
 	void Pause();
