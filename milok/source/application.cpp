@@ -4,6 +4,7 @@
 void application::Init()
 {
     k_window = new sf::RenderWindow(sf::VideoMode(512*2, 256*2), "SFML works!");
+    k_window->setFramerateLimit(60);
     stateStack::GetInstance()->ChangeState(StateTypes::INTRO);
     windowConector::GetInstance()->setWindow(k_window);
   //  rt.loadFromFile("../Data/Textures/idle.png");
@@ -15,23 +16,26 @@ void application::Run()
     sf::Clock cc;
     Init();
     while (k_window->isOpen())
-    {
+    {   
+        float deltaTime =cc.getElapsedTime().asSeconds();
+      
         sf::Event event;
         while (k_window->pollEvent(event))
         {
             if (event.type == sf::Event::Closed)
                 k_window->close();
         }
-        Update(cc);
+        Update(deltaTime);
+        cc.restart();
         Render();
     }
 }
-void application::Update(sf::Clock &cc) {
+void application::Update(float deltaTime) {
     if (stateStack::GetInstance()->needToChangeState()) {
         stateStack::GetInstance()->PerformStateChange();
     }
-    stateStack::GetInstance()->currentState()->Update(cc);
-   // hi->Update(cc);
+    stateStack::GetInstance()->currentState()->Update(deltaTime);
+   // hi->Update(deltaTime);
 }
 void application::Render()
 {

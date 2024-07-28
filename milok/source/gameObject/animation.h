@@ -8,10 +8,14 @@ private:
 	sf::IntRect source;
 	int k_numFrame;
 	double k_time;
+	double currentTime;
+	int cobraX;
+	int cobraY;
 public:
-	animation(sf::Texture &tex, int numFrame);
+	animation(sf::Texture &tex, int numFrame,double tim);
 	void calSize();
-	void Update(sf::Clock &cc);
+	void Update(float deltaTime);
 	void Reset();
+	void setTime(double chuchu);
 };
 

@@ -19,7 +19,7 @@ void gameButton::Init(std::string name)
 void gameButton::Render(sf::RenderWindow* window) {
     window->draw(*this);
 }
-void gameButton::Update(sf::Clock& cc)
+void gameButton::Update(float deltaTime)
 {
     if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
         touch();

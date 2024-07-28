@@ -12,6 +12,7 @@ playerState::playerState() {
 	fallState = new Ifall(this);
 	attackState = new Iattack(this);
 	death = new Ideath(this);
+	//fast = new IrunFast(this);
 	currentState = runState;
 }
 characterStateBase::characterState playerState::getState() {
@@ -37,14 +38,17 @@ void playerState::Init() {
 	jumpState->Init();
 	fallState->Init();
 	attackState->Init();
+	//fast->Init();
 	death->Init();
-	ske = new skeleton(sf::Vector2i( 64, 44));
-	ske->Init(sf::Vector2f(3, 200));
+	ske = new skeleton(sf::Vector2i( 20,35));
+	ske->Init(sf::Vector2f(250, 100));
+	ske->setPosition(100, 400);
+
 }
-void playerState::Update(sf::Clock* cc)
+void playerState::Update( float deltaTime)
 {
 	performStateChange();
-	currentState->Update(cc);
+	currentState->Update(deltaTime);
 
 }
 
@@ -78,6 +82,10 @@ void playerState::performStateChange()
 			currentState = attackState;
 			current = characterStateBase::characterState::ATTACK;
 			break;
+		/*case characterStateBase::characterState::FAST:
+			currentState = fast;
+			current = characterStateBase::characterState::FAST;
+			break;*/
 		default:
 			break;
 		}

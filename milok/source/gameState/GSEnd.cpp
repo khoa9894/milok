@@ -24,7 +24,7 @@ void GSEnd::Init()
 {
 }
 
-void GSEnd::Update(sf::Clock& cc)
+void GSEnd::Update(float deltaTime)
 {
 }
 

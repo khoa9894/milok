@@ -30,9 +30,9 @@ void GSHighScore::Init()
 	butt->setClick([]() {stateStack::GetInstance()->PopState(); });
 }
 
-void GSHighScore::Update(sf::Clock& cc)
+void GSHighScore::Update(float deltaTime)
 {
-	butt->Update(cc);
+	butt->Update(deltaTime);
 }
 
 void GSHighScore::Render(sf::RenderWindow* window)

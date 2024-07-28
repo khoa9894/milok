@@ -8,8 +8,9 @@ Iattack::Iattack(Iplayer* playah)
 
 void Iattack::Init()
 {
-	cu = new animation(*resourceManage::GetInstance()->gtTexture("attack"), 10);
+	cu = new animation(*resourceManage::GetInstance()->gtTexture("attack"), 10, 0.09);
 	cu->setScale(3, 3);
+	current = 0.0f;
 	//cu->setPosition(0, 350);
 }
 
@@ -18,11 +19,13 @@ void Iattack::Render(sf::RenderWindow* window)
 	window->draw(*cu);
 }
 
-void Iattack::Update(sf::Clock* cc)
+void Iattack::Update( float deltaTime)
 {
-	cu->Update(*cc);
-	if (cc->getElapsedTime().asSeconds() > 0.1) {
+	current += deltaTime;
+	cu->Update(deltaTime);
+	if (current > 0.8) {
 		player->changeState(characterStateBase::characterState::RUN);
+		current = 0.0f;
 	}
 	cu->setPosition(player->getSkeleton()->getPosition());
 	

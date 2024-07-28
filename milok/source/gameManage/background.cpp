@@ -56,7 +56,7 @@ void background::Update(float speed)
 {
 	for (auto it : layerList) {
 		if (it != layerList.front()) {
-			it->Update(0.1);
+			it->Update(2);
 
 		}
 

@@ -63,7 +63,7 @@ void GSMenu::Init()
 //	pi.setScale(2, 2);
 	
 	sf::Texture* tex = resourceManage::GetInstance()->gtTexture("idle");
-	ani = new animation(*tex,6);
+	ani = new animation(*tex,6,0.1);
 //	ani->setOrigin(sf::Vector2f(tex->getSize().x,tex->getSize().y));
 
 	ani->setPosition(sf::Vector2f(971 / 2 + 5-20-10-20-10-10-10-10, 500 / 2 + 500 / 10 + 60 - 40-10-20-30-40-50-20-40-20-20-10-10));
@@ -71,12 +71,12 @@ void GSMenu::Init()
 
 }
 
-void GSMenu::Update(sf::Clock& cc)
+void GSMenu::Update(float deltaTime)
 {
 	for (auto it : buttonList) {
-		it ->Update(cc);
+		it ->Update(deltaTime);
 	}
-	ani->Update(cc);
+	ani->Update(deltaTime);
 }
 
 void GSMenu::Render(sf::RenderWindow* window)

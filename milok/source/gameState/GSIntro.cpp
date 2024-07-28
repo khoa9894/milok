@@ -22,13 +22,17 @@ void GSIntro::Init()
 	sprite.setTexture(*resourceManage::GetInstance()->gtTexture("stool"));
 	sprite.setPosition(512-50,256-100);
 	sprite.setOrigin((sf::Vector2f) resourceManage::GetInstance()->gtTexture("cuc")->getSize() / 2.f);
-	sprite.setScale(0.4,0.4);
+	sprite.setScale(0.4f,0.4f);
+	cur = 0.0f;
 }
 
-void GSIntro::Update(sf::Clock& cc)
+void GSIntro::Update(float deltaTime)
 {
-	if (cc.getElapsedTime().asSeconds() > 1) {
+	 cur += deltaTime;
+	 printf("cur: %f\n", cur);
+	if (cur>=1) {
 		stateStack::GetInstance()->ChangeState(StateTypes::PLAY);
+		cur = 0.0f;
 	}
 }
 

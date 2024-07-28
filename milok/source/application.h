@@ -13,6 +13,6 @@ public:
 	void Run();
 	void Render();
 	~application();
-	void Update(sf::Clock &cc);
+	void Update(float deltaTime);
 };
 

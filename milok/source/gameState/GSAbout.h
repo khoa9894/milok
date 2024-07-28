@@ -13,7 +13,7 @@ public:
 	void Resume();
 	void Pause();
 	void Init();
-	void Update(sf::Clock& cc);
+	void Update(float deltaTime);
 	void Render(sf::RenderWindow* window);
 //	void openGitHubLink(const std::string& url);
  private: 

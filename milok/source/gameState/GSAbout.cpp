@@ -31,9 +31,9 @@ void GSAbout::Init()
 	butt->setClick([]() {stateStack::GetInstance()->PopState(); });
 }
 
-void GSAbout::Update(sf::Clock& cc)
+void GSAbout::Update(float deltaTime)
 {
-	butt->Update(cc);
+	butt->Update(deltaTime);
 }
 
 void GSAbout::Render(sf::RenderWindow* window)

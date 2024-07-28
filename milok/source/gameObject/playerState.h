@@ -1,4 +1,5 @@
 #pragma once
+
 #include "characterStateBase.h"
 #include "Iplayer.h"
 #include "Hitbox.h"
@@ -8,7 +9,7 @@ public:
 	~playerState();
 	void changeState(characterStateBase::characterState nextState);
 	void Init();
-	void Update(sf::Clock* cc);
+	void Update(float deltaTime);
 	void Render(sf::RenderWindow* window);
 	characterStateBase::characterState getState();
 	skeleton* getSkeleton();

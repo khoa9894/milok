@@ -10,7 +10,7 @@ public:	GSMenu();
 	void Resume();
 	void Pause();
 	void Init();
-	void Update(sf::Clock& cc);
+	void Update(float deltaTime);
 	void Render(sf::RenderWindow* window);
 private:
 	std::list<gameButton*> buttonList;

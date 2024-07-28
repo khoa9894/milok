@@ -7,7 +7,7 @@ Ideath::Ideath(Iplayer* playah)
 
 void Ideath::Init()
 {
-	cu = new animation(*resourceManage::GetInstance()->gtTexture("death"), 11);
+	cu = new animation(*resourceManage::GetInstance()->gtTexture("death"), 11,0.1);
 	cu->setScale(3, 3);
 	cu->setPosition(0, 350);
 }
@@ -18,9 +18,9 @@ void Ideath::Render(sf::RenderWindow* window)
 
 }
 
-void Ideath::Update(sf::Clock* cc)
+void Ideath::Update(float deltaTime)
 {
-	cu->Update(*cc);
+	cu->Update(deltaTime);
 
 }
 
