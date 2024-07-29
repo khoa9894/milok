@@ -22,21 +22,24 @@ void Irun::Render(sf::RenderWindow* window)
 
 void Irun::Update(float deltaTime)
 {
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
-	
-		player->getSkeleton()->move(player->getSkeleton()->Velocity().x * deltaTime, 0);
-}
-	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
-		player->getSkeleton()->move(-player->getSkeleton()->Velocity().x * deltaTime, 0);
+	if (player->getSkeleton()->isAlive() == 1) {
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
+
+			player->getSkeleton()->move(player->getSkeleton()->Velocity().x * deltaTime, 0);
+		}
+		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
+			player->getSkeleton()->move(-player->getSkeleton()->Velocity().x * deltaTime, 0);
+		}
+
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+			player->changeState(characterStateBase::characterState::JUMP);
+
+		}
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
+			player->changeState(characterStateBase::characterState::ATTACK);
+		}
 	}
-	
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-		player->changeState(characterStateBase::characterState::JUMP);
-		
-	}
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-		player->changeState(characterStateBase::characterState::ATTACK);
-	}
+	else player->changeState(DEATH);
 	cu->Update(deltaTime);
 	cu->setPosition(player->getSkeleton()->getPosition());
 }

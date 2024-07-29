@@ -10,7 +10,9 @@ skeleton::skeleton(sf::Vector2i size): RectangleShape((sf::Vector2f)size)
 
 
 }
-
+void skeleton::setTag(Tag tang) {
+	tag = tang;
+}
 skeleton::~skeleton()
 {
 }

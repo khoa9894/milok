@@ -4,15 +4,29 @@ void creep::Init()
 {
 
 	//ske->setPosition(100, 400);
+	//currentTime = 0.0f;
 }
 
 void creep::Update(float deltaTime)
 {
-	ske->move(-ske->Velocity().x * deltaTime, 0);
-	current->setPosition(sf::Vector2f(ske->getPosition()));
+	if (ske->isAlive() == 1) {
+		ske->setPosition(sf::Vector2f(m_startPoint));
+		current = run;
+		ske->move(-ske->Velocity().x * deltaTime, 0);
+		if (ske->getPosition().x + 64 <= 0) ske->setAlive(0);		
+}
+	else {
+		float currentTime=0.0f;
+		currentTime += 0.1;
+		current = death;
+		if (currentTime >= 0.1) {
+			reset();
+			ske->setAlive(1);
+			currentTime = 0.0f;	
+		}
+	}
+	current->setPosition(ske->getPosition());
 	current->Update(deltaTime);
-	if(ske->getPosition().x+64<=0) ske->setPosition(sf::Vector2f (m_startPoint));
-	//current = death;
 }
 
 void creep::Render(sf::RenderWindow* window)
@@ -24,4 +38,9 @@ void creep::Render(sf::RenderWindow* window)
 skeleton* creep::getSke()
 {
 	return ske;
+}
+void creep::reset() {
+	ske->setPosition(sf::Vector2f(m_startPoint));
+	current = run;
+	
 }

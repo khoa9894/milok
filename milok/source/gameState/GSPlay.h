@@ -5,6 +5,7 @@
 #include"../gameObject/creep.h"
 #include"../gameObject/Bat.h"
 #include"../gameObject/cobra.h"
+#include"../gameObject/collision.h"
 class GSPlay : public gameStateBase {
 public:
 //	GSPlay() {};
@@ -20,5 +21,7 @@ private:
 	playerState ccc;
 	layer* layer1;
 	std::list<creep*> listCreep;
+	CollisionManager coll;
+	
 //nimation* penguin;
 };

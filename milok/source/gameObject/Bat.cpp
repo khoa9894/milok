@@ -10,5 +10,7 @@ void Bat::Init()
 	run->setScale(1, 1);
 	ske->Init(sf::Vector2f(100, 200));
 	ske->setPosition(sf::Vector2f(1000, 200));
+	ske->setTag(CREEP);
+	ske->setAlive(1);
 	current = run;
 }

@@ -11,10 +11,12 @@ public:
  virtual void Render(sf::RenderWindow* window);
  virtual skeleton* getSke();
  void setStartPoint(sf::Vector2f point) { m_startPoint = point; }
+ void reset();
 protected:
 	sf::Vector2f m_startPoint;
 	animation* current;
 	animation* run;
 	animation* death;
 	skeleton* ske;
+	float currentTime;
 };

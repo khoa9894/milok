@@ -43,6 +43,9 @@ void playerState::Init() {
 	ske = new skeleton(sf::Vector2i( 20,35));
 	ske->Init(sf::Vector2f(250, 100));
 	ske->setPosition(100, 400);
+	ske->setTag(PLAYER);
+	ske->setAlive(1);
+	ske->setAttack(0);
 
 }
 void playerState::Update( float deltaTime)
@@ -64,22 +67,27 @@ void playerState::performStateChange()
 		switch (nextState) {
 		case characterStateBase::characterState::RUN:
 			currentState = runState;
+			ske->setAttack(0);
 			current = characterStateBase::characterState::RUN;
 			break;
 		case characterStateBase::characterState::JUMP:
 			currentState = jumpState;
+			ske->setAttack(0);
 			current = characterStateBase::characterState::JUMP;
 			break;
 		case characterStateBase::characterState::FALL:
 			currentState = fallState;
+			ske->setAttack(0);
 			current = characterStateBase::characterState::FALL;
 			break;
 		case characterStateBase::characterState::DEATH:
 			currentState = death;
+			ske->setAttack(0);
 			current = characterStateBase::characterState::DEATH;
 			break;
 		case characterStateBase::characterState::ATTACK:
 			currentState = attackState;
+			ske->setAttack(1);
 			current = characterStateBase::characterState::ATTACK;
 			break;
 		/*case characterStateBase::characterState::FAST:

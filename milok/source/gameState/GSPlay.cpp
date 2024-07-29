@@ -24,9 +24,13 @@ void GSPlay::Init()
 	listCreep.push_back(bot);
 	bot = new Bat();
 	listCreep.push_back(bot);
-	//hi.Init();
+	
 	for (auto it : listCreep) {
 		it->Init();
+	}
+	coll.addObj(ccc.getSkeleton());
+	for (auto it: listCreep){
+		coll.addObj(it->getSke());
 	}
 	
 }
@@ -41,11 +45,11 @@ void GSPlay::Update(float deltaTime)
 		layer1->Update(3.6f);
 		concu.Update(3);
 	}
-	//hi.Update(deltaTime);
 	ccc.Update(deltaTime);
 	for (auto it : listCreep) {
 		it->Update(deltaTime);
 	}
+	coll.Update();
 }
 
 void GSPlay::Render(sf::RenderWindow* window)

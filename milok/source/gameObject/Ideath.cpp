@@ -9,7 +9,7 @@ void Ideath::Init()
 {
 	cu = new animation(*resourceManage::GetInstance()->gtTexture("death"), 11,0.1);
 	cu->setScale(3, 3);
-	cu->setPosition(0, 350);
+
 }
 
 void Ideath::Render(sf::RenderWindow* window)
@@ -21,7 +21,7 @@ void Ideath::Render(sf::RenderWindow* window)
 void Ideath::Update(float deltaTime)
 {
 	cu->Update(deltaTime);
-
+	cu->setPosition(player->getSkeleton()->getPosition());
 }
 
 void Ideath::Reset()
