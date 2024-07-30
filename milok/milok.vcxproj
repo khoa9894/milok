@@ -149,6 +149,7 @@
     <ClInclude Include="source\gameObject\cobra.h" />
     <ClInclude Include="source\gameObject\collision.h" />
     <ClInclude Include="source\gameObject\creep.h" />
+    <ClInclude Include="source\gameObject\creepSpawn.h" />
     <ClInclude Include="source\gameObject\gameButton.h" />
     <ClInclude Include="source\gameObject\IrunFast.h" />
     <ClInclude Include="source\gameObject\Hitbox.h" />
@@ -181,6 +182,7 @@
     <ClCompile Include="source\gameObject\cobra.cpp" />
     <ClCompile Include="source\gameObject\collision.cpp" />
     <ClCompile Include="source\gameObject\creep.cpp" />
+    <ClCompile Include="source\gameObject\creepSpawn.cpp" />
     <ClCompile Include="source\gameObject\gameButton.cpp" />
     <ClCompile Include="source\gameObject\Hitbox.cpp" />
     <ClCompile Include="source\gameObject\Ideath.cpp" />

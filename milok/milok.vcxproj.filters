@@ -123,6 +123,9 @@
     <ClInclude Include="source\gameObject\collision.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="source\gameObject\creepSpawn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\application.cpp">
@@ -216,6 +219,9 @@
       <Filter>Header Files\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="source\gameObject\collision.cpp">
+      <Filter>Header Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gameObject\creepSpawn.cpp">
       <Filter>Header Files\Source Files</Filter>
     </ClCompile>
   </ItemGroup>

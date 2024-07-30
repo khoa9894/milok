@@ -13,6 +13,7 @@ bool CollisionManager::checkCollision(skeleton* a, skeleton* b)
 
 void CollisionManager::Update()
 {
+
     for (auto a : m_listObj) {
         if (a->isAlive() == 0) continue;
         for (auto b : m_listObj) {
@@ -22,12 +23,12 @@ void CollisionManager::Update()
             if (a->getTag() == PLAYER && b->getTag() == CREEP) {
                 a->setAlive(0);
                 b->setAlive(0);
+                if (a->isattack() == 1) {
+                    a->setAlive(1);
+                    b->setAlive(0);
+                }
             }
-            if (a->isattack() == 1) {
-                a->setAlive(1);
-                b->setAlive(0);
-               
-            }
+           
 
         }
     }

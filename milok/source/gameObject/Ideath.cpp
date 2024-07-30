@@ -3,6 +3,7 @@
 Ideath::Ideath(Iplayer* playah)
 {
 	player = playah;
+	time = 0.0f;
 }
 
 void Ideath::Init()
@@ -20,8 +21,12 @@ void Ideath::Render(sf::RenderWindow* window)
 
 void Ideath::Update(float deltaTime)
 {
+	time += deltaTime;
 	cu->Update(deltaTime);
 	cu->setPosition(player->getSkeleton()->getPosition());
+	if (time >= 1) {
+		stateStack::GetInstance()->ChangeState(MENU);
+	}
 }
 
 void Ideath::Reset()

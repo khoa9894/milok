@@ -2,10 +2,8 @@
 #include"stateStack.h"
 #include "../gameObject/playerState.h"
 #include "../gameManage/background.h"
-#include"../gameObject/creep.h"
-#include"../gameObject/Bat.h"
-#include"../gameObject/cobra.h"
-#include"../gameObject/collision.h"
+#include "../gameObject/creepSpawn.h"
+
 class GSPlay : public gameStateBase {
 public:
 //	GSPlay() {};
@@ -20,8 +18,9 @@ private:
 	background concu;
 	playerState ccc;
 	layer* layer1;
-	std::list<creep*> listCreep;
+//	std::list<creep*> listCreep;
 	CollisionManager coll;
+	creepSpawn spawn;
 	
 //nimation* penguin;
 };

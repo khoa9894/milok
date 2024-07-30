@@ -10,16 +10,14 @@ void creep::Init()
 void creep::Update(float deltaTime)
 {
 	if (ske->isAlive() == 1) {
-		ske->setPosition(sf::Vector2f(m_startPoint));
 		current = run;
 		ske->move(-ske->Velocity().x * deltaTime, 0);
 		if (ske->getPosition().x + 64 <= 0) ske->setAlive(0);		
 }
 	else {
-		float currentTime=0.0f;
-		currentTime += 0.1;
+		currentTime += deltaTime;
 		current = death;
-		if (currentTime >= 0.1) {
+		if (currentTime >= 0.5) {
 			reset();
 			ske->setAlive(1);
 			currentTime = 0.0f;	

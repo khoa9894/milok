@@ -25,6 +25,9 @@ public:	skeleton(sf::Vector2i size);
 	void setAttack(bool attack) {
 		this->isAttack = attack;
 	}
+	void setVelocity(sf::Vector2f vec) {
+		this->velocity = vec;
+	}
 private:
 	sf::Vector2f velocity;
 	Tag tag;

@@ -38,9 +38,8 @@ void playerState::Init() {
 	jumpState->Init();
 	fallState->Init();
 	attackState->Init();
-	//fast->Init();
 	death->Init();
-	ske = new skeleton(sf::Vector2i( 20,35));
+	ske = new skeleton(sf::Vector2i( 10,35));
 	ske->Init(sf::Vector2f(250, 100));
 	ske->setPosition(100, 400);
 	ske->setTag(PLAYER);

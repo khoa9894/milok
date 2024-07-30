@@ -2,6 +2,7 @@
 
 #include "characterStateBase.h"
 #include "IPlayer.h"
+#include"../gameState/stateStack.h"
 class Ideath :public characterStateBase {
 public:	Ideath(Iplayer* playah);
 	void Init();
@@ -11,4 +12,5 @@ public:	Ideath(Iplayer* playah);
 private:
 	Iplayer* player;
 	animation* cu;
+	float time;
 };

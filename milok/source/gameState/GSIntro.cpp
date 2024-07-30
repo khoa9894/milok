@@ -31,7 +31,7 @@ void GSIntro::Update(float deltaTime)
 	 cur += deltaTime;
 	 printf("cur: %f\n", cur);
 	if (cur>=1) {
-		stateStack::GetInstance()->ChangeState(StateTypes::PLAY);
+		stateStack::GetInstance()->ChangeState(StateTypes::MENU);
 		cur = 0.0f;
 	}
 }

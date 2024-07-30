@@ -6,6 +6,15 @@
 
 class creep {
 public:
+	creep() {
+		currentTime = 0.0f;
+	}
+	~creep() {
+		current = nullptr;
+		if (run != nullptr) delete run;
+		if (death != nullptr) delete death;
+		if (ske != nullptr) delete ske;
+	}
  virtual void Init();
  virtual void Update(float deltaTime);
  virtual void Render(sf::RenderWindow* window);

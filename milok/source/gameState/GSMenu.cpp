@@ -66,7 +66,7 @@ void GSMenu::Init()
 	ani = new animation(*tex,6,0.1);
 //	ani->setOrigin(sf::Vector2f(tex->getSize().x,tex->getSize().y));
 
-	ani->setPosition(sf::Vector2f(971 / 2 + 5-20-10-20-10-10-10-10, 500 / 2 + 500 / 10 + 60 - 40-10-20-30-40-50-20-40-20-20-10-10));
+	ani->setPosition(sf::Vector2f(559,170));
 	ani->setScale(5, 5);
 
 }
