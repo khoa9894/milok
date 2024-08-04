@@ -36,7 +36,7 @@ void creepSpawn::Update(float deltaTime)
 {
 
 	currentTime += deltaTime;
-	if (currentTime >= 0.5) {
+	if (currentTime >= 2) {
 		spawnBat();
 		spawnCobra();
 		currentTime = 0.0f;
@@ -72,7 +72,7 @@ void creepSpawn::spawnCobra()
 	crep->getSke()->setAlive(1);
 	crep->setStartPoint(sf::Vector2f(1024+rand()%100, 432));
 	crep->getSke()->setVelocity(sf::Vector2f(200 + rand() % 200, 200));
-	//crep->reset();
+	crep->reset();
 //	crep = nullptr;
 
 }
@@ -82,15 +82,14 @@ void creepSpawn::spawnBat()
 	creep* crep = nullptr;
 	for (auto it : bat) {
 		if (it->getSke()->isAlive() == 0) {
-			printf("hi\n");
 			crep = it;
 			break;
 		}
 	}
 	if (crep == nullptr) return;
 	crep->getSke()->setAlive(1);
-	crep->setStartPoint(sf::Vector2f(1024,256+100));
+	crep->setStartPoint(sf::Vector2f(1024,200+rand()%100));
 	crep->getSke()->setVelocity(sf::Vector2f(200 + rand() % 200, 200));
-	//crep->reset();
+	crep->reset();
 //	crep = nullptr;
 }

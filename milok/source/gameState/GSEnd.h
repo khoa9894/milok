@@ -4,6 +4,7 @@
 #include "gameStateBase.h"
 #include <SFML/Graphics.hpp>
 #include"stateStack.h"
+#include "../gameObject/scoreManagecpp.h"
 
 class GSEnd : public gameStateBase {
 public:
@@ -16,6 +17,10 @@ public:
 	void Update(float deltaTime);
 	void Render(sf::RenderWindow* window);
 private:
+	sf::Sprite backGround;
+	std::list<gameButton*> buttonList;
+	sf::Text yourScore;
+	sf::Text bestScore;
 
 
 

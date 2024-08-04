@@ -25,7 +25,7 @@ void Ideath::Update(float deltaTime)
 	cu->Update(deltaTime);
 	cu->setPosition(player->getSkeleton()->getPosition());
 	if (time >= 1) {
-		stateStack::GetInstance()->ChangeState(MENU);
+		stateStack::GetInstance()->ChangeState(END);
 	}
 }
 

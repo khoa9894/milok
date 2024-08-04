@@ -2,6 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include "../gameManage/resourceManage.h"
 #include "animation.h"
+#include"animation2.h"
 class characterStateBase {
 public:
 	enum characterState {

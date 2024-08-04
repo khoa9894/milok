@@ -17,7 +17,7 @@ void creep::Update(float deltaTime)
 	else {
 		currentTime += deltaTime;
 		current = death;
-		if (currentTime >= 0.5) {
+		if (currentTime >= 1) {
 			reset();
 			ske->setAlive(1);
 			currentTime = 0.0f;	

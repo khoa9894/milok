@@ -123,7 +123,25 @@
     <ClInclude Include="source\gameObject\collision.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="source\gameObject\animation2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gameObject\Boss.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="source\gameObject\creepSpawn.h">
+      <Filter>Header Files\Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gameManage\background2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gameObject\bullet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gameObject\BulletSpawn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gameObject\scoreManagecpp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -222,6 +240,24 @@
       <Filter>Header Files\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="source\gameObject\creepSpawn.cpp">
+      <Filter>Header Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gameObject\animation2.cpp">
+      <Filter>Header Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gameObject\Boss.cpp">
+      <Filter>Header Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gameManage\background2.cpp">
+      <Filter>Header Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gameObject\bullet.cpp">
+      <Filter>Header Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gameObject\BulletSpawn.cpp">
+      <Filter>Header Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gameObject\scoreManagecpp.cpp">
       <Filter>Header Files\Source Files</Filter>
     </ClCompile>
   </ItemGroup>

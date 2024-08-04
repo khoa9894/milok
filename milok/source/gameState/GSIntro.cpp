@@ -16,7 +16,7 @@ void GSIntro::Init()
 {
 	
 	text.setFont(*resourceManage::GetInstance()->getFont("ARCADE_N"));
-	text.setString("Du ma studio");
+	text.setString("Mai iu Milok");
 	text.setFillColor(sf::Color::Red);
 	text.setPosition(512-150, 350);
 	sprite.setTexture(*resourceManage::GetInstance()->gtTexture("stool"));
@@ -29,8 +29,8 @@ void GSIntro::Init()
 void GSIntro::Update(float deltaTime)
 {
 	 cur += deltaTime;
-	 printf("cur: %f\n", cur);
-	if (cur>=1) {
+	// printf("cur: %f\n", cur);
+	if (cur>=2) {
 		stateStack::GetInstance()->ChangeState(StateTypes::MENU);
 		cur = 0.0f;
 	}

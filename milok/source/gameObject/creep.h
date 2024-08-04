@@ -20,6 +20,7 @@ public:
  virtual void Render(sf::RenderWindow* window);
  virtual skeleton* getSke();
  void setStartPoint(sf::Vector2f point) { m_startPoint = point; }
+ sf::Vector2f getStartPoint() { return m_startPoint; }
  void reset();
 protected:
 	sf::Vector2f m_startPoint;

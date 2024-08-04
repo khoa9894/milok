@@ -23,7 +23,6 @@ void animation::calSize()
 }
 
 void animation::Reset() {
-	//cc.restart();
 	source.left = 0;
 }
 

@@ -3,6 +3,7 @@
 enum Tag {
 	PLAYER,
 	CREEP,
+	BULLET,
 };
 class skeleton :public sf::RectangleShape {
 public:	skeleton(sf::Vector2i size);
@@ -27,6 +28,9 @@ public:	skeleton(sf::Vector2i size);
 	}
 	void setVelocity(sf::Vector2f vec) {
 		this->velocity = vec;
+	}
+	void size(sf::Vector2f vec) {
+		this->setSize(vec);
 	}
 private:
 	sf::Vector2f velocity;

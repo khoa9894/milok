@@ -68,7 +68,11 @@ void GSMenu::Init()
 
 	ani->setPosition(sf::Vector2f(559,170));
 	ani->setScale(5, 5);
-
+	name.setFont(*resourceManage::GetInstance()->getFont("ARCADE_N"));
+	name.setFillColor(sf::Color::Black);
+	name.setString("Milok's adventure");
+	name.setPosition(500, 50);
+	//name.setScale(0.5, 0.5);
 }
 
 void GSMenu::Update(float deltaTime)
@@ -87,4 +91,5 @@ void GSMenu::Render(sf::RenderWindow* window)
 		it ->Render(window);
 	}
 	window->draw(*ani);
+	//window->draw(name);
 }

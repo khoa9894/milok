@@ -16,4 +16,5 @@ private:
 	std::list<gameButton*> buttonList;
 	sf::Sprite pi;
 	animation* ani;
+	sf::Text name;
 };

@@ -9,7 +9,7 @@ void Irun::Init()
 {
 	cu = new animation(*resourceManage::GetInstance()->gtTexture("run"),8,0.09);
 	//cu = new animation(*resourceManage::GetInstance()->gtTexture("attack"), 10, 0.09);
-	cu->setScale(3, 3);
+	cu->setScale(3,3);
 //	cu->setPosition(0, 350);
 
 }
@@ -40,6 +40,7 @@ void Irun::Update(float deltaTime)
 		}
 	}
 	else player->changeState(DEATH);
+   
 	cu->Update(deltaTime);
 	cu->setPosition(player->getSkeleton()->getPosition());
 }
